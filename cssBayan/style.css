@@ -8,7 +8,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   font-family: sans-serif;
   font-size: 1.2em;
   font-weight: 400;
@@ -16,7 +15,7 @@ body {
   letter-spacing: 0em;
   text-align: left;
   background-color: azure;
-  color: #000000;
+  color: #000820;
 }
 
 *,
@@ -34,21 +33,13 @@ body {
   height: 100%;
 }
 
-.accordion {
-  padding: 1.5em 0;
-  cursor: pointer;
-}
-
-.accordion:hover + .material-symbols-outlined {
-  display: block;
-}
-
 .main-title {
-  border-bottom: cadetblue solid;
+  padding-top: 0.8em;
 }
 
 .accordion-item {
   width: 11.7em;
+  border-top: cadetblue solid 0.1em;
 }
 
 .meme-input {
@@ -56,21 +47,19 @@ body {
 }
 
 .meme-title {
-  display: block;
-  font-size: 1.5em;
-  color: rgb(2, 80, 87);
-  border-bottom: cadetblue solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.8em;
+  color: rgb(0, 158, 173);
   cursor: pointer;
   transition: 1s;
 }
 
-.meme-title:hover {
-}
-
 .material-symbols-outlined {
+  padding-top: 0.4em;
+  align-items: center;
   display: none;
-  padding-left: 4em;
-  /* transform: translate(500%); */
 }
 
 .meme-img {
@@ -88,12 +77,31 @@ body {
 
 .meme-input:checked ~ .meme-img {
   max-height: 100vh;
-  transition: 2s;
-}
-
-.meme-1:checked {
+  transition: all 2s;
+  padding-bottom: 0.3em;
 }
 
 .meme-input:checked ~ .material-symbols-outlined {
+  transform: rotate(0.5turn);
   /* transform: translateY(-50%) rotate(0.5turn); */
+}
+
+.meme-input:checked ~ .meme-title {
+  color: rgb(2, 80, 87);
+}
+
+//---------jhgfd--------//
+
+.accordion {
+  cursor: pointer;
+}
+
+.accordion:hover + .meme-title {
+}
+
+.accordion:hover + .material-symbols-outlined {
+  display: block;
+}
+
+.meme-title:hover {
 }
